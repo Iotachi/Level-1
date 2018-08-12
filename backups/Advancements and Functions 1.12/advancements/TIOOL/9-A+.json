@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Complete level 1-9","color":"white"},
+		"title":{"text":"The Code","color":"white"},
+		"icon":{"item":"stained_hardened_clay","data":12}
+	},
+	"criteria":{"level9":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["level9"]],"parent":"TIOOL:8-A"
+}

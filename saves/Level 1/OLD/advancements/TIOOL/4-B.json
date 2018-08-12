@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Find the secret in level 1-4","color":"white"},
+		"title":{"text":"Outside the Lines","color":"white"},
+		"icon":{"item":"snowball","data":0}
+	},
+	"criteria":{"secret4":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["secret4"]],"parent":"TIOOL:3-A"
+}

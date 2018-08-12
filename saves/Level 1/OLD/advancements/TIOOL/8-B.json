@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Find the secret in level 1-8","color":"white"},
+		"title":{"text":"Faulty Turret","color":"white"},
+		"icon":{"item":"arrow","data":0}
+	},
+	"criteria":{"secret8":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["secret8"]],"parent":"TIOOL:7-A++"
+}

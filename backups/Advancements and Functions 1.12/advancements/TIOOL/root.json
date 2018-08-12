@@ -1,0 +1,11 @@
+{
+	"display":
+	{
+		"description":
+		{"text":"Welcome to the map!","color":"white"},
+		"title":{"text":"There is Only One Level","color":"white"},
+		"icon":{"item":"clay","data":0},
+		"background":"minecraft:textures/blocks/concrete_powder_white.png"
+	},
+		"criteria":{"startMap":{"trigger":"minecraft:impossible"}},"rewards":{},"requirements":[["startMap"]]
+	}

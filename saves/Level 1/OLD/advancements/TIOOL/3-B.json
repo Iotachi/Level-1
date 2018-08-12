@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Find the secret in level 1-3","color":"white"},
+		"title":{"text":"Taking Notes","color":"white"},
+		"icon":{"item":"record_mall","data":0}
+	},
+	"criteria":{"secret3":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["secret3"]],"parent":"TIOOL:2-A"
+}

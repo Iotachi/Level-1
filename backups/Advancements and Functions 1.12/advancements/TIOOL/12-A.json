@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Complete level 1-12","color":"white"},
+		"title":{"text":"Impending Doom","color":"white"},
+		"icon":{"item":"stained_hardened_clay","data":15}
+	},
+	"criteria":{"level12":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["level12"]],"parent":"TIOOL:11-A"
+}

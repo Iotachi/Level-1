@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Find the secret in level 1-2","color":"white"},
+		"title":{"text":"Into Fire","color":"white"},
+		"icon":{"item":"blaze_powder","data":0}
+	},
+	"criteria":{"secret2":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["secret2"]],"parent":"TIOOL:1-A"
+}

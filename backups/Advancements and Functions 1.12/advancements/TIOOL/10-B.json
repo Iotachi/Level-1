@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Find the secret in level 1-10","color":"white"},
+		"title":{"text":"Eddy","color":"white"},
+		"icon":{"item":"deadbush","data":0}
+	},
+	"criteria":{"secret10":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["secret10"]],"parent":"TIOOL:9-A+"
+}

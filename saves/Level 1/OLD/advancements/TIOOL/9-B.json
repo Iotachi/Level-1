@@ -1,0 +1,10 @@
+{
+	"display":
+	{"description":
+		{"text":"Find the secret in level 1-9","color":"white"},
+		"title":{"text":"Double Take","color":"white"},
+		"icon":{"item":"sign","data":0}
+	},
+	"criteria":{"secret9":{"trigger":"minecraft:impossible"}},
+	"rewards":{},"requirements":[["secret9"]],"parent":"TIOOL:8-A"
+}
