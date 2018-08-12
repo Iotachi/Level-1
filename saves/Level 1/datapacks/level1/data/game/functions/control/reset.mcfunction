@@ -12,8 +12,11 @@ scoreboard objectives add functionActive dummy
 # "updateTrack" scoreboard prevents players from being left behind if they log out and log back in
 scoreboard objectives remove updateTrack
 scoreboard objectives add updateTrack dummy
-# Counts up by one each time a stage deactivates; Compaires with a player's "updateTrack" score to check if they're caught up
-scoreboard players set #updateTrack controlData 0
+scoreboard players set #controller updateTrack 0
+
+# "ignoreTrack" scoreboard prevents players from being updated while in the hub
+scoreboard objectives remove ignoreTrack
+scoreboard objectives add ignoreTrack dummy
 
 # "speedrun" scoreboard uses sidebar to show players how long they've been playing
 scoreboard objectives remove speedrun
