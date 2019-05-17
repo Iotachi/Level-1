@@ -6,4 +6,7 @@ scoreboard players operation @s updateTrack = #controller updateTrack
 
 
 # Prepare for next stage
-tag @s add updateStage
+tag @s[scores={updateTrack=13}] add updateStage
+
+# Return to hub
+tag @s[scores={updateTrack_min=14}] add updateStage

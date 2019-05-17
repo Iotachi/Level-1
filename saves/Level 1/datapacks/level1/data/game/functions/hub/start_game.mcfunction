@@ -6,4 +6,4 @@ execute if score #speedrunDisplay functionActive matches 1 run scoreboard player
 scoreboard players add #controller updateTrack 1
 
 # Activates stage 1
-function game:stage0/init
+function game:stage1/init
