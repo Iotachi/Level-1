@@ -26,3 +26,14 @@ scoreboard players set Milliseconds speedrun 0
 # Sets "Speedrun Timer" ON/OFF sign to OFF
 data merge block 52 107 43 {Text4:"{\"text\":\"[OFF]\",\"color\":\"dark_red\",\"bold\":true}"}
 setblock 52 106 44 minecraft:red_wool
+
+# "onFire" scoreboard tests if a player is on fire in stage1
+scoreboard objectives remove onFire
+scoreboard objectives add onFire dummy
+
+# "rhythm" scoreboard tracks when each player needs to jump in stage2
+scoreboard objectives remove rhythm
+scoreboard objectives add rhythm dummy
+# "jumped" scoreboard tests if a player jumped in stage2
+scoreboard objectives remove jumped
+scoreboard objectives add jumped minecraft.custom:minecraft.jump

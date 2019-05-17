@@ -8,3 +8,6 @@ execute unless score #controller updateTrack matches 1 run function game:hub/ret
 
 # Otherwise goes to next stage
 execute if score #controller updateTrack matches 1 run function game:stage2/init
+
+# Bumps updateTrack
+scoreboard players add #controller updateTrack 1
