@@ -5,6 +5,8 @@ team add players
 team modify players collisionRule pushOtherTeams
 team modify players friendlyFire false
 
+
+
 # "functionActive" scoreboard tracks what functions should be run every tick
 scoreboard objectives remove functionActive
 scoreboard objectives add functionActive dummy
@@ -18,6 +20,8 @@ scoreboard players set #controller updateTrack -1
 scoreboard objectives remove ignoreTrack
 scoreboard objectives add ignoreTrack dummy
 
+
+
 # "speedrun" scoreboard uses sidebar to show players how long they've been playing
 scoreboard objectives remove speedrun
 scoreboard objectives add speedrun dummy {"text":"TIMER","color":"yellow","bold":true}
@@ -26,6 +30,15 @@ scoreboard players set Milliseconds speedrun 0
 # Sets "Speedrun Timer" ON/OFF sign to OFF
 data merge block 52 107 43 {Text4:"{\"text\":\"[OFF]\",\"color\":\"dark_red\",\"bold\":true}"}
 setblock 52 106 44 minecraft:red_wool
+
+
+
+# "hasItem" scoreboard tracks what items the player has recieved
+# 1 = paintball on stage3
+scoreboard objectives remove hasItem
+scoreboard objectives add hasItem dummy
+
+
 
 # "onFire" scoreboard tests if a player is on fire in stage1
 scoreboard objectives remove onFire
