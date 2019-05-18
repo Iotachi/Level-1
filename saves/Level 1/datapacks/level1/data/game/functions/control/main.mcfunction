@@ -15,3 +15,4 @@ execute if score #speedrun functionActive matches 1 run function game:speedrun/r
 execute if score #stage functionActive matches 0 run function game:stage0/main
 execute if score #stage functionActive matches 1 run function game:stage1/main
 execute if score #stage functionActive matches 2 run function game:stage2/main
+execute if score #stage functionActive matches 3 run function game:stage3/main
