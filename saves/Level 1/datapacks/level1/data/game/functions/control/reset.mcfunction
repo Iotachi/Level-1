@@ -41,4 +41,5 @@ scoreboard objectives add atFinish dummy
 scoreboard objectives remove onFire
 scoreboard objectives remove rhythm
 scoreboard objectives remove jumped
-scoreboard objectives remove hasPaintball
+scoreboard objectives remove hasSnowball
+scoreboard objectives remove paintColor
