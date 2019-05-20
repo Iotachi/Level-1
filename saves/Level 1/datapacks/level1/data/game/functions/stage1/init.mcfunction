@@ -3,4 +3,4 @@
 scoreboard players set #stage functionActive 1
 
 # Used for testing if a player is on fire
-scoreboard objectives add onFire dummy
+scoreboard objectives add s1.onFire dummy

@@ -1,7 +1,6 @@
 
-# Resets checkpoint
-setblock 81 93 22 minecraft:redstone_block
-setblock 81 93 22 minecraft:lapis_block
+# Resets stage
+function game:stage0/reset
 
 # Return to hub if stages have already been completed
 execute unless score #controller updateTrack matches 0 run function game:hub/return

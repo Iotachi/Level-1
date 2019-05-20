@@ -37,9 +37,10 @@ setblock 52 106 44 minecraft:red_wool
 scoreboard objectives remove atFinish
 scoreboard objectives add atFinish dummy
 
-# Removes stage-specific scoreboards
-scoreboard objectives remove onFire
-scoreboard objectives remove rhythm
-scoreboard objectives remove jumped
-scoreboard objectives remove hasSnowball
-scoreboard objectives remove paintColor
+
+# Resets stages
+function game:stage0/reset
+function game:stage1/reset
+function game:stage2/reset
+function game:stage3/reset
+function game:stage4/reset

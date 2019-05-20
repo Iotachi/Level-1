@@ -1,11 +1,6 @@
 
-# Removes stage-specific scoreboards
-scoreboard objectives remove rhythm
-scoreboard objectives remove jumped
-
-# Resets checkpoint
-setblock 145 93 22 minecraft:redstone_block
-setblock 145 93 22 minecraft:lapis_block
+# Resets stage
+function game:stage2/reset
 
 # Return to hub if stages have already been completed
 execute unless score #controller updateTrack matches 2 run function game:hub/return
