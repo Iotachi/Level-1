@@ -1,15 +1,15 @@
 
 # Raises platform
-setblock 207 93 22 minecraft:redstone_block
-setblock 207 93 22 minecraft:lapis_block
+setblock 207 93 30 minecraft:redstone_block
+setblock 207 93 30 minecraft:lapis_block
 
 # Cosmetics
-playsound minecraft:block.piston.extend block @a[scores={ignoreTrack=0}] 208 94 19 1 2
-playsound minecraft:block.note_block.chime block @a[scores={ignoreTrack=0}] 208 98 19
-particle minecraft:block minecraft:gold_block 208.35 99.00 19.33 .8 .1 .8 0 100 normal
+playsound minecraft:block.piston.extend block @a[scores={ignoreTrack=0}] 208 94 27 1 2
+playsound minecraft:block.note_block.chime block @a[scores={ignoreTrack=0}] 208 98 27
+particle minecraft:block minecraft:gold_block 208 99 27 .8 .1 .8 0 100 normal
 
 # Pushing players up
-tp @a[x=207,y=95,z=18,dx=2,dy=1,dz=2] ~ 99 ~
+tp @a[x=207,y=95,z=26,dx=2,dy=1,dz=2] ~ 99 ~
 
 # Announcing checkpoint activation
-tellraw @a[scores={ignoreTrack=0}] [{"selector":"@p[x=199,y=100,z=19,scores={ignoreTrack=0}]","color":"green"},{"text":" has unlocked the checkpoint"}]
+tellraw @a[scores={ignoreTrack=0}] [{"selector":"@p[x=200,y=100,z=26,scores={ignoreTrack=0}]","color":"green"},{"text":" has unlocked the checkpoint"}]

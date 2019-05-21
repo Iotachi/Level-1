@@ -3,7 +3,7 @@
 clone ~-1 ~-19 ~-1 ~1 ~-17 ~1 ~-1 ~-1 ~-1 filtered minecraft:white_concrete
 
 # Paints a random color
-scoreboard players operation @s paintColor = @e[type=minecraft:area_effect_cloud,tag=stage3PaintColor,limit=1,sort=random] paintColor
+scoreboard players operation @s paintColor = @e[type=minecraft:area_effect_cloud,tag=paintColor,limit=1,sort=random] paintColor
 execute if score @s paintColor matches 0 run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:light_blue_concrete replace minecraft:white_concrete
 execute if score @s paintColor matches 1 run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:lime_concrete replace minecraft:white_concrete
 execute if score @s paintColor matches 2 run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:orange_concrete replace minecraft:white_concrete

@@ -1,7 +1,7 @@
 
 # Removes stage-specific scoreboards
-scoreboard objectives remove s2.rhythm
-scoreboard objectives remove s2.jumped
+scoreboard objectives remove rhythm
+scoreboard objectives remove jumped
 
 # Resets checkpoint
 setblock 145 93 22 minecraft:redstone_block
