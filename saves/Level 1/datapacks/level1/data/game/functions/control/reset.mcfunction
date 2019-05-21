@@ -2,7 +2,7 @@
 # "players" team checks if a player has been initialized, and prevents multiplayer interference
 team remove players
 team add players
-team modify players collisionRule pushOtherTeams
+team modify players collisionRule pushOwnTeam
 team modify players friendlyFire false
 
 

@@ -12,4 +12,4 @@ particle minecraft:block minecraft:gold_block 208 99 27 .8 .1 .8 0 100 normal
 tp @a[x=207,y=95,z=26,dx=2,dy=1,dz=2] ~ 99 ~
 
 # Announcing checkpoint activation
-tellraw @a[scores={ignoreTrack=0}] [{"selector":"@p[x=200,y=100,z=26,scores={ignoreTrack=0}]","color":"green"},{"text":" has unlocked the checkpoint"}]
+tellraw @a[scores={ignoreTrack=0}] {"text":"1.364 tons of TNT has unlocked the checkpoint","color":"green"}

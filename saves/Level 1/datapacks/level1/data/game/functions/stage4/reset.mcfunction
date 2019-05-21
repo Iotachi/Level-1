@@ -6,7 +6,7 @@ execute at @e[type=minecraft:area_effect_cloud,tag=activatorRail] run setblock ~
 kill @e[tag=s4_kill]
 
 # Removes stage-specific scoreboards
-scoreboard objectives remove activatorTimer
+scoreboard objectives remove s4_control
 
 # Resets checkpoint
 setblock 209 93 30 minecraft:redstone_block

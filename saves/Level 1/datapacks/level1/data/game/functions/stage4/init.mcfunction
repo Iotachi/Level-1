@@ -2,8 +2,8 @@
 # Causes stage's main function to run every tick
 scoreboard players set #stage functionActive 4
 
-# Tracks when activator rails should be active
-scoreboard objectives add activatorTimer dummy
+# Tracks when activator rails should be active and whether a minecart should be spawned
+scoreboard objectives add s4_control dummy
 
 # Summoning activator rail markers
 summon minecraft:area_effect_cloud 213 95 21 {Duration:2147483647,Tags:["activatorRail","s4_kill"]}
