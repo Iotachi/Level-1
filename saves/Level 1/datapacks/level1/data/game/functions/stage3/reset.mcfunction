@@ -3,7 +3,7 @@
 kill @e[tag=s3_kill]
 
 # Removes stage-specific scoreboards
-scoreboard objectives remove hasPaintball
+scoreboard objectives remove hasSnowball
 scoreboard objectives remove paintColor
 
 # Resets checkpoint and painted blocks
