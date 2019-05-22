@@ -38,9 +38,11 @@ scoreboard objectives remove atFinish
 scoreboard objectives add atFinish dummy
 
 
+
 # Resets stages
 function game:stage0/reset
 function game:stage1/reset
 function game:stage2/reset
 function game:stage3/reset
 function game:stage4/reset
+function game:stage5/reset

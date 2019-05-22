@@ -6,7 +6,7 @@ setblock 79 93 22 minecraft:lapis_block
 # Cosmetics
 playsound minecraft:block.piston.extend block @a[scores={ignoreTrack=0}] 80 94 19 1 2
 playsound minecraft:block.note_block.chime block @a[scores={ignoreTrack=0}] 80 98 19
-particle minecraft:block minecraft:gold_block 80.35 99.00 19.33 .8 .1 .8 0 100 normal
+particle minecraft:block minecraft:gold_block 80 99 19 .8 .1 .8 0 100 normal
 
 # Pushing players up
 tp @a[x=79,y=95,z=18,dx=2,dy=1,dz=2] ~ 99 ~

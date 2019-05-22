@@ -3,7 +3,7 @@
 execute as @a[tag=updateStage] run function game:stage4/player_setup
 
 # Activating the checkpoint
-execute if block 208 94 27 minecraft:gold_block if block 200 100 27 minecraft:detector_rail[powered=true] run function game:stage4/checkpoint
+execute if block 208 94 27 minecraft:gold_block if block 199 100 27 minecraft:detector_rail[powered=true] run function game:stage4/checkpoint
 
 # Activator rail timer
 scoreboard players add #activatorTimer s4_control 1
@@ -20,9 +20,7 @@ execute as @e[type=minecraft:command_block_minecart,tag=payloadMinecart] run sco
 execute if score #minecartCount s4_control <= #playerCount s4_control unless entity @e[type=minecraft:command_block_minecart,tag=payloadMinecart,x=213,y=95,z=31,dx=0,dy=1,dz=9] run summon minecraft:command_block_minecart 213 96 40 {Invulnerable:1b,Command:"function game:stage4/explode",CustomDisplayTile:1,DisplayOffset:6,DisplayState:{Name:"minecraft:tnt"},Tags:["payloadMinecart","s4_kill"]}
 
 # Easier minecart control when player crouches
-execute as @a[scores={isCrouching=1..,ignoreTrack=0}] at @s rotated ~ 0 if block ^ ^ ^1 minecraft:rail run scoreboard players set @s isCrouching 5
-execute as @a[scores={isCrouching=1..,ignoreTrack=0}] at @s rotated ~ 0 if block ^ ^ ^1 minecraft:activator_rail run scoreboard players set @s isCrouching 5
-execute as @a[scores={isCrouching=5..,ignoreTrack=0}] at @s rotated ~ 0 positioned ^ ^ ^1 run tp @e[type=minecraft:command_block_minecart,tag=payloadMinecart,distance=...5,limit=1,sort=nearest] ~ ~ ~
+execute as @a[scores={isCrouching=1..,ignoreTrack=0}] at @s rotated ~ 0 positioned ^ ^ ^1 run tp @e[type=minecraft:command_block_minecart,tag=payloadMinecart,distance=..0.5,limit=1,sort=nearest] ~ ~ ~
 scoreboard players set @a[scores={isCrouching=1..,ignoreTrack=0}] isCrouching 0
 
 # Pushing minecarts out of the spawn area
