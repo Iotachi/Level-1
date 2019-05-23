@@ -3,6 +3,9 @@
 execute if block 80 94 19 minecraft:gold_block run tp @s 80 95 19 180 0
 execute unless block 80 94 19 minecraft:gold_block run tp @s 80 99 19 0 0
 
+# Sets spawn point to stage
+spawnpoint @s 80 99 19
+
 # Show title
 title @s subtitle {"text":"The Only Level"}
 title @s title {"text":"1","color":"dark_aqua"}

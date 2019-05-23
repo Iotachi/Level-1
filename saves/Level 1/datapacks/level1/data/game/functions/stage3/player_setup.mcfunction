@@ -3,6 +3,9 @@
 execute if block 176 94 19 minecraft:gold_block run tp @s 176 95 19 180 0
 execute unless block 176 94 19 minecraft:gold_block run tp @s 176 99 19 0 0
 
+# Sets spawn point to stage
+spawnpoint @s 176 99 19
+
 # Show title
 title @s subtitle {"text":"Color Crazy","color":"aqua"}
 title @s title {"text":"1.3","color":"dark_aqua"}
