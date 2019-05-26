@@ -27,4 +27,4 @@ scoreboard players set @a[scores={isCrouching=1..,ignoreTrack=0}] isCrouching 0
 data merge entity @e[type=minecraft:command_block_minecart,tag=payloadMinecart,x=213,y=95,z=37.5,distance=..1,limit=1] {Motion:[0.0d,0.0d,-0.1d]}
 
 # Blowing up minecarts that pressed a detector rail
-execute as @e[type=minecraft:command_block_minecart,tag=payloadMinecart,tag=noMessageExplode] run function game:stage4/explode
+execute as @e[type=minecraft:command_block_minecart,tag=payloadMinecart,tag=noMessageExplode] at @s run function game:stage4/explode
