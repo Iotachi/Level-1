@@ -18,3 +18,6 @@ execute if score #stage functionActive matches 2 run function game:stage2/main
 execute if score #stage functionActive matches 3 run function game:stage3/main
 execute if score #stage functionActive matches 4 run function game:stage4/main
 execute if score #stage functionActive matches 5 run function game:stage5/main
+
+# Break room main function
+execute if score #break functionActive matches 1 run function game:break/main

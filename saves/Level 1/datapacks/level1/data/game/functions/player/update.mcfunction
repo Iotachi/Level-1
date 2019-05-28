@@ -6,6 +6,9 @@ clear @s minecraft:snowball{s3_snowball:1b}
 effect clear @s minecraft:jump_boost
 effect give @s minecraft:saturation 1000000 0 true
 
+# Stops stage-specific sounds
+stopsound @s
+
 # Set correct update track
 scoreboard players operation @s updateTrack = #controller updateTrack
 

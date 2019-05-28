@@ -1,4 +1,3 @@
 
-# Resets checkpoint
-setblock 81 93 22 minecraft:redstone_block
-setblock 81 93 22 minecraft:lapis_block
+# Kills entities that were used in the break room
+kill @e[tag=break_kill]

@@ -1,7 +1,9 @@
 
-# Prepares players to play stage
-execute as @a[tag=updateStage] run function game:stage0/player_setup
+# Prepares players for break room
+execute as @a[tag=updateStage] run function game:break/player_setup
 
-# Tracks when players are at the end of the level
-execute as @a[x=70,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=0}] run function game:player/reach_finish
-scoreboard players set @a[x=70,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=0}] atFinish 1
+# Chest bartender mechanics
+execute as @e[type=minecraft:armor_stand,tag=break_bartender] at @s run function game:break/bartender
+
+# Changing the music
+execute as @e[type=minecraft:slime,tag=break_jukebox,nbt={HurtTime:10s}] at @s run function game:break/change_disc

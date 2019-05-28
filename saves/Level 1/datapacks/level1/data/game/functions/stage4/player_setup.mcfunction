@@ -7,7 +7,7 @@ execute unless block 208 94 27 minecraft:gold_block run tp @s 208 99 27 0 0
 spawnpoint @s 208 99 19
 
 # Show title
-title @s subtitle {"text":"Payload","color":"red"}
+title @s subtitle {"text":"Payload","color":"dark_red"}
 title @s title {"text":"1.4","color":"dark_aqua"}
 
 # Remove setup tag
