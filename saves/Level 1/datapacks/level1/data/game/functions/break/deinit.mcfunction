@@ -1,12 +1,10 @@
 
-# Resets stage
-function game:stage0/reset
+# Resets break room
+function game:break/reset
+scoreboard players reset #break functionActive
 
-# Return to hub if stages have already been completed
-execute unless score #controller updateTrack matches 0 run function game:hub/return
-
-# Otherwise goes to next stage
-execute if score #controller updateTrack matches 0 run function game:stage1/init
+# Goes to next stage
+function game:stage6/init
 
 # Bumps updateTrack
 scoreboard players add #controller updateTrack 1

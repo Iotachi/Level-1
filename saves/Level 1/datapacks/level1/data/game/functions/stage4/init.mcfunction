@@ -4,8 +4,6 @@ scoreboard players set #stage functionActive 4
 
 # Tracks when activator rails should be active and whether a minecart should be spawned
 scoreboard objectives add s4_control dummy
-# Checks when player is crouching to activate easy minecart control
-scoreboard objectives add isCrouching minecraft.custom:minecraft.sneak_time
 
 # Summoning activator rail markers
 summon minecraft:area_effect_cloud 213 95 21 {Duration:2147483647,Tags:["activatorRail","s4_kill"]}

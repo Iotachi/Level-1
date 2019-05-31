@@ -1,0 +1,1 @@
+function game:control/reset

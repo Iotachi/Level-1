@@ -15,7 +15,7 @@ summon minecraft:area_effect_cloud 244 98 9 {Duration:2147483647,Effects:[{Id:25
 
 summon minecraft:area_effect_cloud 248 99 10 {Duration:2147483647,Effects:[{Id:25b,Amplifier:12b,Duration:7,ShowParticles:0b}],Radius:0.7,Particle:"minecraft:block minecraft:air",Tags:["levitator","s5_kill"]}
 
-summon minecraft:area_effect_cloud 243 101 14 {Duration:2147483647,Effects:[{Id:25b,Amplifier:12b,Duration:10,ShowParticles:0b}],Radius:0.7,Particle:"minecraft:block minecraft:air",Tags:["levitator","s5_kill"]}
+summon minecraft:area_effect_cloud 242 101 13 {Duration:2147483647,Effects:[{Id:25b,Amplifier:12b,Duration:10,ShowParticles:0b}],Radius:0.7,Particle:"minecraft:block minecraft:air",Tags:["levitator","s5_kill"]}
 
 summon minecraft:area_effect_cloud 239 102 9 {Duration:2147483647,Effects:[{Id:25b,Amplifier:13b,Duration:6,ShowParticles:0b}],Radius:0.7,Particle:"minecraft:block minecraft:air",Tags:["levitator","s5_kill"]}
 

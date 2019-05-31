@@ -5,6 +5,15 @@ team add players
 team modify players collisionRule pushOwnTeam
 team modify players friendlyFire false
 
+# "no_collision" team prevents collision
+team remove no_collision
+team add no_collision
+team modify no_collision collisionRule never
+
+# "trigger" scoreboard is used letting playersr interact with JSON
+scoreboard objectives remove trigger
+scoreboard objectives add trigger trigger
+
 
 
 # "functionActive" scoreboard tracks what functions should be run every tick
