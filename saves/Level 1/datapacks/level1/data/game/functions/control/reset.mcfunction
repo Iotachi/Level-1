@@ -53,6 +53,7 @@ function game:stage2/reset
 function game:stage3/reset
 function game:stage4/reset
 function game:stage5/reset
+function game:stage6/reset
 
 # Resets break room
 function game:break/reset
