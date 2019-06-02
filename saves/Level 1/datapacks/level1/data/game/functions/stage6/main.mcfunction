@@ -21,3 +21,7 @@ execute if entity @p[x=283.5,y=106,z=41.5,distance=..0.4,y_rotation=180..360,sco
 # Acacia doors
 execute if entity @p[x=261.5,y=101,z=33.5,distance=..0.4,y_rotation=0..180,scores={ignoreTrack=0}] run function game:stage6/door/acacia0
 execute if entity @p[x=283.5,y=106,z=21.5,distance=..0.4,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage6/door/acacia1
+
+# Dark oak doors
+execute if entity @p[x=283.5,y=106,z=17.5,distance=..0.4,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage6/door/dark_oak0
+execute if entity @p[x=261.5,y=106,z=29.5,distance=..0.4,y_rotation=0..180,scores={ignoreTrack=0}] run function game:stage6/door/dark_oak1

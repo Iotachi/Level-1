@@ -1,7 +1,7 @@
 
 # Resets checkpoint
 setblock 273 93 22 minecraft:redstone_block
-setblock 723 93 22 minecraft:lapis_block
+setblock 273 93 22 minecraft:lapis_block
 
 # Resets oak doors
 setblock 282 101 9 minecraft:oak_door[facing=west,hinge=right]
@@ -20,8 +20,8 @@ setblock 262 101 33 minecraft:acacia_door[facing=east,hinge=left]
 setblock 282 106 21 minecraft:acacia_door[facing=west,hinge=right]
 
 # Resets dark oak doors
-setblock 282 106 17 minecraft:dark_oak_door[facing=west,hinge=left]
-setblock 262 106 29 minecraft:dark_oak_door[facing=east,hinge=right]
+setblock 282 106 17 minecraft:dark_oak_door[facing=west,hinge=right]
+setblock 262 106 29 minecraft:dark_oak_door[facing=east,hinge=left]
 
 # Resets jungle doors
 setblock 282 106 29 minecraft:jungle_door[facing=west,hinge=right]
