@@ -1,6 +1,6 @@
 
 # Teleports player
-execute as @a[x=261.5,y=101,z=33.5,distance=..0.4,y_rotation=0..180,scores={ignoreTrack=0}] at @s run tp @s ~22 ~5 ~-12
+execute as @a[x=261.5,y=101,z=33.5,distance=..0.3,y_rotation=0..180,scores={ignoreTrack=0}] at @s run tp @s ~22 ~5 ~-12
 
 # Plays door sounds
 execute if block 262 101 33 minecraft:acacia_door[open=true] run playsound minecraft:block.wooden_door.close block @a[scores={ignoreTrack=0}] 262 101 33
