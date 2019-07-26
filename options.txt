@@ -1,4 +1,4 @@
-version:1963
+version:1976
 autoJump:false
 autoSuggestions:true
 chatColors:true
@@ -16,7 +16,7 @@ showSubtitles:true
 touchscreen:false
 fullscreen:false
 bobView:true
-mouseSensitivity:0.5042583626760564
+mouseSensitivity:0.6522612235915493
 fov:1.0
 gamma:1.0
 renderDistance:16
@@ -53,6 +53,7 @@ attackIndicator:1
 narrator:0
 tutorialStep:none
 mouseWheelSensitivity:1.0
+rawMouseInput:true
 glDebugVerbosity:1
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right

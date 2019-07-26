@@ -3,27 +3,29 @@
 execute as @a[tag=updateStage] run function game:stage2/player_setup
 
 # Tracks when players are at the end of the level
-execute as @a[x=134,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=0}] run function game:player/reach_finish
-scoreboard players set @a[x=134,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0}] atFinish 3
-scoreboard players remove @a[scores={ignoreTrack=0,atFinish=2..}] atFinish 1
+execute as @a[x=143,y=105,z=38,dx=2,dy=0,dz=5,scores={ignoreTrack=0,atFinish=0}] run function game:player/reach_finish
+scoreboard players set @a[x=143,y=105,z=38,dx=2,dy=0,dz=5,scores={ignoreTrack=0,atFinish=0}] atFinish 1
 
-# Ignores rhythm for players at the start or finish
-execute if block 144 94 19 minecraft:gold_block run tag @a[x=143,y=95,z=18,dx=2,dy=1,dz=2,scores={ignoreTrack=0}] add ignoreRhythm
-execute unless block 144 94 19 minecraft:gold_block run tag @a[x=143,y=99,z=18,dx=2,dy=1,dz=2,scores={ignoreTrack=0}] add ignoreRhythm
-tag @a[scores={ignoreTrack=0,atFinish=2..}] add ignoreRhythm
-scoreboard players set @a[tag=ignoreRhythm] rhythm 5
+# Oak doors
+execute if entity @p[x=155.5,y=101,z=9.5,distance=..0.3,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage2/door/oak0
+execute if entity @p[x=133.5,y=106,z=9.5,distance=..0.3,y_rotation=0..180,scores={ignoreTrack=0}] run function game:stage2/door/oak1
 
-# Timing for jumps
-scoreboard players add @a[tag=!ignoreRhythm,scores={ignoreTrack=0}] rhythm 1
-execute as @a[scores={ignoreTrack=0,rhythm=18}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 16 1.32 1
-execute as @a[scores={ignoreTrack=0,rhythm=38}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 16 1.05 1
+# Spruce doors
+execute if entity @p[x=155.5,y=101,z=5.5,distance=..0.3,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage2/door/spruce0
+execute if entity @p[x=133.5,y=101,z=21.5,distance=..0.3,y_rotation=0..180,scores={ignoreTrack=0}] run function game:stage2/door/spruce1
 
-scoreboard players set @a[scores={ignoreTrack=0,rhythm=53,jumped=1..}] jumped 0
+# Birch doors
+execute if entity @p[x=155.5,y=101,z=33.5,distance=..0.3,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage2/door/birch0
+execute if entity @p[x=155.5,y=106,z=41.5,distance=..0.3,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage2/door/birch1
 
-execute as @a[scores={ignoreTrack=0,rhythm=58}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 16 .7 1
+# Acacia doors
+execute if entity @p[x=133.5,y=101,z=33.5,distance=..0.3,y_rotation=0..180,scores={ignoreTrack=0}] run function game:stage2/door/acacia0
+execute if entity @p[x=155.5,y=106,z=21.5,distance=..0.3,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage2/door/acacia1
 
-execute as @a[scores={ignoreTrack=0,rhythm=60..,jumped=..0}] run function game:stage2/death
-scoreboard players remove @a[scores={ignoreTrack=0,rhythm=60..}] rhythm 60
+# Dark oak doors
+execute if entity @p[x=155.5,y=106,z=17.5,distance=..0.3,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage2/door/dark_oak0
+execute if entity @p[x=133.5,y=106,z=29.5,distance=..0.3,y_rotation=0..180,scores={ignoreTrack=0}] run function game:stage2/door/dark_oak1
 
-# Resets ignoreRhythm tag
-tag @a[tag=ignoreRhythm] remove ignoreRhythm
+# Jungle doors
+execute if entity @p[x=155.5,y=106,z=29.5,distance=..0.3,y_rotation=180..360,scores={ignoreTrack=0}] run function game:stage2/door/jungle0
+execute if entity @p[x=133.5,y=106,z=41.5,distance=..0.3,y_rotation=0..180,scores={ignoreTrack=0}] run function game:stage2/door/jungle1

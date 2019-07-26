@@ -1,14 +1,23 @@
 
 # Clears stage-specific items
-clear @s minecraft:snowball{s3_snowball:1b}
-clear @s minecraft:cooked_salmon{break_remove:1b}
-clear @s minecraft:beetroot_soup{break_remove:1b}
-clear @s minecraft:bread{break_remove:1b}
-clear @s minecraft:baked_potato{break_remove:1b}
-clear @s minecraft:suspicious_stew{break_remove:1b}
+clear @s minecraft:snowball
+clear @s minecraft:cooked_salmon
+clear @s minecraft:beetroot_soup
+clear @s minecraft:bread
+clear @s minecraft:baked_potato
+clear @s minecraft:suspicious_stew
 clear @s minecraft:bowl
-clear @s minecraft:potion{break_remove:1b}
+clear @s minecraft:potion
 clear @s minecraft:glass_bottle
+clear @s minecraft:gunpowder
+clear @s minecraft:sugar
+clear @s minecraft:glowstone_dust
+clear @s minecraft:feather
+clear @s minecraft:ladder
+clear @s minecraft:iron_pickaxe
+clear @s minecraft:emerald
+clear @s minecraft:firework_rocket
+clear @s minecraft:nether_star
 
 # Clears stage-specific affects
 effect clear @s minecraft:jump_boost

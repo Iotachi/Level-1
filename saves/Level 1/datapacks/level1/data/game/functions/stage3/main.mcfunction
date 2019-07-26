@@ -4,33 +4,26 @@ execute as @a[tag=updateStage] run function game:stage3/player_setup
 
 # Tracks when players are at the end of the level
 execute as @a[x=166,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=0}] run function game:player/reach_finish
-scoreboard players set @a[x=166,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=0}] atFinish 1
+scoreboard players set @a[x=166,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0}] atFinish 3
+scoreboard players remove @a[scores={ignoreTrack=0,atFinish=2..}] atFinish 1
 
-# Gives paintball to players
-execute at @e[type=item,tag=snowballGiver] run scoreboard players set @a[distance=..1,scores={ignoreTrack=0,hasSnowball=0}] hasSnowball 1
-execute as @a[scores={ignoreTrack=0,hasSnowball=1}] unless data entity @s Inventory[].tag.s3_snowball run clear @s minecraft:snowball{s3_snowball:1b}
-execute as @a[scores={ignoreTrack=0,hasSnowball=1}] unless data entity @s Inventory[].tag.s3_snowball run give @s minecraft:snowball{s3_snowball:1b,display:{Name:"{\"text\":\"Paintball\",\"italic\":false,\"color\":\"aqua\"}"}}
+# Ignores rhythm for players at the start or finish
+execute if block 176 95 19 minecraft:air run tag @a[x=175,y=95,z=18,dx=2,dy=1,dz=2,scores={ignoreTrack=0}] add ignoreRhythm
+execute unless block 176 94 19 minecraft:air run tag @a[x=175,y=99,z=18,dx=2,dy=1,dz=2,scores={ignoreTrack=0}] add ignoreRhythm
+tag @a[scores={atFinish=2..,ignoreTrack=0}] add ignoreRhythm
+scoreboard players set @a[tag=ignoreRhythm] rhythm 5
 
-# Kills snowball items if they've been dropped
-execute as @e[type=minecraft:item] if data entity @s Item.tag.s3_snowball run kill @s
+# Timing for jumps
+scoreboard players add @a[tag=!ignoreRhythm,scores={ignoreTrack=0}] rhythm 1
+execute as @a[scores={ignoreTrack=0,rhythm=18}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 16 1.32 1
+execute as @a[scores={ignoreTrack=0,rhythm=38}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 16 1.05 1
 
-# Summons AEC when snowball is thrown
-execute as @e[type=minecraft:snowball,tag=!s3_kill] run summon area_effect_cloud ~ ~ ~ {Duration:2147483647,Tags:["s3_kill","paint"]}
-tag @e[type=minecraft:snowball,tag=!s3_kill] add s3_kill
+scoreboard players set @a[scores={ignoreTrack=0,rhythm=53,jumped=1..}] jumped 0
 
-# Spawns blocks when a snowball disappears
-execute as @e[type=minecraft:snowball] run tp @e[type=area_effect_cloud,tag=paint,limit=1,sort=nearest] @s
-execute as @e[type=minecraft:snowball] at @s if block ~ ~ ~ minecraft:structure_void run kill @s
-execute as @e[type=minecraft:area_effect_cloud,tag=paint] at @s unless entity @e[type=minecraft:snowball,distance=0] run function game:stage3/paint
+execute as @a[scores={ignoreTrack=0,rhythm=58}] at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 16 .7 1
 
-# Stops paint from being thrown out the top of the stage
-kill @e[tag=s3_kill,x=167,y=111,z=4,dx=18,dy=1,dz=38]
+execute as @a[gamemode=adventure,scores={ignoreTrack=0,rhythm=60..,jumped=..0}] run function game:stage3/death
+scoreboard players remove @a[scores={ignoreTrack=0,rhythm=60..}] rhythm 60
 
-# Creating non-concrete blocks
-execute unless block 176 100 27 minecraft:slime_block unless block 176 99 27 minecraft:structure_void run setblock 176 100 27 minecraft:slime_block
-execute unless block 182 104 28 minecraft:ladder unless block 182 104 27 minecraft:structure_void run setblock 182 104 28 minecraft:ladder[facing=south]
-execute unless block 181 106 20 minecraft:ladder unless block 180 106 20 minecraft:structure_void run setblock 181 106 20 minecraft:ladder[facing=east]
-
-# Killing players who step on non-painted floor
-execute as @a[scores={ignoreTrack=0}] at @s if block ~ ~-.1 ~ minecraft:quartz_block run function game:stage3/death
-execute as @a[scores={ignoreTrack=0}] at @s if block ~ ~-.1 ~ minecraft:light_blue_terracotta run function game:stage3/death
+# Resets ignoreRhythm tag
+tag @a[tag=ignoreRhythm] remove ignoreRhythm

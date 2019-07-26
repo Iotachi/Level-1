@@ -2,7 +2,7 @@
 # "players" team checks if a player has been initialized, and prevents multiplayer interference
 team remove players
 team add players
-team modify players collisionRule pushOwnTeam
+team modify players collisionRule pushOtherTeams
 team modify players friendlyFire false
 
 # "no_collision" team prevents collision
@@ -30,7 +30,6 @@ scoreboard objectives remove ignoreTrack
 scoreboard objectives add ignoreTrack dummy
 
 
-
 # "speedrun" scoreboard uses sidebar to show players how long they've been playing
 scoreboard objectives remove speedrun
 scoreboard objectives add speedrun dummy {"text":"TIMER","color":"yellow","bold":true}
@@ -54,6 +53,7 @@ function game:stage3/reset
 function game:stage4/reset
 function game:stage5/reset
 function game:stage6/reset
+function game:stage7/reset
 
 # Resets break room
 function game:break/reset

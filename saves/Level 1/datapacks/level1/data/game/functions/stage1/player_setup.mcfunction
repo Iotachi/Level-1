@@ -1,7 +1,7 @@
 
 # Teleport player to stage
-execute if block 80 94 19 minecraft:gold_block run tp @s 112 95 99 180 0
-execute unless block 80 94 19 minecraft:gold_block run tp @s 112 99 99 0 0
+tp @s 112 95 99 180 0
+execute unless block 80 98 19 minecraft:air run tp @s 112 99 99 0 0
 
 # Sets spawn point to stage
 spawnpoint @s 112 99 99

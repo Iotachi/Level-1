@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_terracotta",
+    "minecraft:quartz_block",
+    "minecraft:quartz_pillar",
+    "minecraft:quartz_slab",
+    "minecraft:quartz_stairs",
+    "minecraft:iron_block",
+    "minecraft:white_stained_glass",
+    "minecraft:slime_block",
+    "minecraft:gold_block",
+    "minecraft:sea_lantern",
+    "minecraft:ladder"
+  ]
+}
