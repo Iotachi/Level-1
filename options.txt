@@ -16,7 +16,7 @@ showSubtitles:true
 touchscreen:false
 fullscreen:false
 bobView:true
-mouseSensitivity:0.6522612235915493
+mouseSensitivity:0.6522611975669861
 fov:1.0
 gamma:1.0
 renderDistance:16
