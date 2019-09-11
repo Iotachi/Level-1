@@ -2,7 +2,8 @@
 # "players" team checks if a player has been initialized, and prevents multiplayer interference
 team remove players
 team add players
-team modify players collisionRule pushOtherTeams
+# May need to update to pushOtherTeams when bug gets fixed
+team modify players collisionRule pushOwnTeam
 team modify players friendlyFire false
 
 # "no_collision" team prevents collision

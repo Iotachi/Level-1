@@ -15,7 +15,7 @@ execute if score #activatorTimer s4_control matches 65.. as @e[type=area_effect_
 # Spawning minecarts
 execute store result score #player_count s4_control if entity @a[scores={ignoreTrack=0}]
 execute store result score #minecart_count s4_control if entity @e[type=minecraft:command_block_minecart,tag=payload_minecart]
-execute if score #minecart_count s4_control <= #player_count s4_control unless entity @e[type=minecraft:command_block_minecart,tag=payload_minecart,x=213,y=95,z=21,dx=0,dy=1,dz=8] run summon minecraft:command_block_minecart 213 97 29 {Invulnerable:1b,Command:"function game:stage4/explode",CustomDisplayTile:1,DisplayOffset:6,DisplayState:{Name:"minecraft:tnt"},Tags:["payload_minecart","s4_kill"]}
+execute if score #minecart_count s4_control <= #player_count s4_control unless entity @e[type=minecraft:command_block_minecart,tag=payload_minecart,x=213,y=95,z=21,dx=0,dy=1,dz=8] run summon minecraft:command_block_minecart 213 96 28 {Invulnerable:1b,Command:"function game:stage4/explode",CustomDisplayTile:1,DisplayOffset:6,DisplayState:{Name:"minecraft:tnt"},Tags:["payload_minecart","s4_kill"]}
 
 # Pushing minecarts out of the spawn area
 data merge entity @e[type=minecraft:command_block_minecart,tag=payload_minecart,x=213,y=95,z=26.5,distance=..1,limit=1] {Motion:[0.0,0.0,-0.1]}

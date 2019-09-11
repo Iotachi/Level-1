@@ -2,31 +2,42 @@
 # Causes stage's main function to run every tick
 scoreboard players set #stage functionActive 7
 
-# Stores code numbers
+# Stores code and randomization numbers
 scoreboard objectives add code dummy
 
+
+# Summons above-anvil item frames
+summon minecraft:item_frame 302 106 43 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["display0","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 301 106 43 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["display1","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 300 106 43 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["display2","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 299 106 43 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["display3","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 298 106 43 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["display4","ignore_rotation","s7_kill"]}
+
+# Summons cypher item frames
+summon minecraft:item_frame 300 96 39 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["odd","puzzle_display","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 299 98 3 {Facing:3b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["board","puzzle_display","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 314 102 5 {Facing:3b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["barrier","puzzle_display","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 296 103 17 {Facing:5b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["book","puzzle_display","ignore_rotation","s7_kill"]}
+summon minecraft:item_frame 290 107 34 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["jigsaw","puzzle_display","ignore_rotation","s7_kill"]}
+
+
 # Generates code
-summon minecraft:silverfish ~ ~ ~ {DeathLootTable:"game:stage7/numbers",Tags:["code_generator","reroll_zero"]}
-scoreboard players set @e[type=minecraft:silverfish,tag=code_generator] code 5
-execute as @e[type=minecraft:silverfish,tag=code_generator] run function game:stage7/unique_rng
-execute store result score $digit0 code run data get entity @e[type=minecraft:item,nbt={Item:{tag:{urng:1b,result:0b}}},limit=1] Item.tag.value
-execute store result score $digit1 code run data get entity @e[type=minecraft:item,nbt={Item:{tag:{urng:1b,result:1b}}},limit=1] Item.tag.value
-execute store result score $digit2 code run data get entity @e[type=minecraft:item,nbt={Item:{tag:{urng:1b,result:2b}}},limit=1] Item.tag.value
-execute store result score $digit3 code run data get entity @e[type=minecraft:item,nbt={Item:{tag:{urng:1b,result:3b}}},limit=1] Item.tag.value
-execute store result score $digit4 code run data get entity @e[type=minecraft:item,nbt={Item:{tag:{urng:1b,result:4b}}},limit=1] Item.tag.value
+function game:stage7/setup/code
 
-# Converts code digits into single string
-scoreboard players set $10 code 10
-scoreboard players operation $code code = $digit0 code
-scoreboard players operation $code code *= $10 code
-scoreboard players operation $code code += $digit1 code
-scoreboard players operation $code code *= $10 code
-scoreboard players operation $code code += $digit2 code
-scoreboard players operation $code code *= $10 code
-scoreboard players operation $code code += $digit3 code
-scoreboard players operation $code code *= $10 code
-scoreboard players operation $code code += $digit4 code
-execute store result entity @e[type=item,nbt={Item:{tag:{urng:1b,result:0b}}},limit=1] Item.tag.int_to_string int 1 run scoreboard players get $code code
-setblock 298 106 45 minecraft:oak_wall_sign[facing=south]{Text1:'{"nbt":"Item.tag.int_to_string","entity":"@e[type=minecraft:item,nbt={Item:{tag:{urng:1b,result:0b}}},limit=1]"}'} destroy
+# Randomizes symbols and puzzle order
+function game:stage7/setup/cypher
 
-kill @e[type=minecraft:item,nbt={Item:{tag:{urng:1b}}}]
+# Odd-one-out puzzle setup
+function game:stage7/setup/odd
+
+# Sign board puzzle setup
+function game:stage7/setup/board
+
+# Invisible number puzzle setup
+function game:stage7/setup/barrier
+
+# Symbol book puzzle setup
+function game:stage7/setup/book
+
+# Jigsaw puzzle setup
+function game:stage7/setup/jigsaw
