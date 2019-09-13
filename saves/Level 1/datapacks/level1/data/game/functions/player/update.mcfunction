@@ -1,27 +1,32 @@
 
 # Clears stage-specific items
-clear @s minecraft:snowball
-clear @s minecraft:cooked_salmon
-clear @s minecraft:beetroot_soup
-clear @s minecraft:bread
-clear @s minecraft:baked_potato
-clear @s minecraft:suspicious_stew
-clear @s minecraft:bowl
-clear @s minecraft:potion
-clear @s minecraft:glass_bottle
-clear @s minecraft:gunpowder
-clear @s minecraft:sugar
-clear @s minecraft:glowstone_dust
-clear @s minecraft:feather
-clear @s minecraft:ladder
-clear @s minecraft:iron_pickaxe
-clear @s minecraft:emerald
-clear @s minecraft:firework_rocket
-clear @s minecraft:nether_star
+#clear @s minecraft:snowball
+#clear @s minecraft:cooked_salmon
+#clear @s minecraft:beetroot_soup
+#clear @s minecraft:bread
+#clear @s minecraft:baked_potato
+#clear @s minecraft:suspicious_stew
+#clear @s minecraft:bowl
+#clear @s minecraft:potion
+#clear @s minecraft:glass_bottle
+#clear @s minecraft:gunpowder
+#clear @s minecraft:sugar
+#clear @s minecraft:glowstone_dust
+#clear @s minecraft:feather
+#clear @s minecraft:ladder
+#clear @s minecraft:iron_pickaxe
+#clear @s minecraft:emerald
+#clear @s minecraft:firework_rocket
+#clear @s minecraft:nether_star
+clear @s
 
 # Clears stage-specific affects
 effect clear @s minecraft:jump_boost
 effect give @s minecraft:saturation 1000000 0 true
+effect give @s minecraft:night_vision 1000000 0 true
+
+# Sets player back to 100 levels
+xp set @s 100 levels
 
 # Stops stage-specific sounds
 stopsound @s

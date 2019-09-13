@@ -7,6 +7,7 @@ execute as @a[x=262,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=
 scoreboard players set @a[x=262,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=0}] atFinish 1
 
 # Gives paintball to players
+execute at @e[type=item,tag=snowballGiver] if entity @p[distance=..1,scores={has_snowball=0},team=!in_hub] run playsound minecraft:entity.item.pickup block @a
 execute at @e[type=item,tag=snowballGiver] run scoreboard players set @a[distance=..1,scores={ignoreTrack=0,has_snowball=0}] has_snowball 1
 execute as @a[scores={ignoreTrack=0,has_snowball=1}] unless data entity @s Inventory[].tag.s6_snowball run clear @s minecraft:snowball{s6_snowball:1b}
 execute as @a[scores={ignoreTrack=0,has_snowball=1}] unless data entity @s Inventory[].tag.s6_snowball run replaceitem entity @s hotbar.0 minecraft:snowball{s6_snowball:1b,display:{Name:"{\"text\":\"Paintball\",\"italic\":false,\"color\":\"aqua\"}"}}

@@ -4,7 +4,7 @@ execute as @a[tag=updateStage] run function game:stage3/player_setup
 
 # Tracks when players are at the end of the level
 execute as @a[x=166,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0,atFinish=0}] run function game:player/reach_finish
-scoreboard players set @a[x=166,y=106.5,z=39,dx=20,dy=0,dz=4,scores={ignoreTrack=0}] atFinish 3
+scoreboard players set @a[x=166,y=105.5,z=39,dx=20,dy=1,dz=4,scores={ignoreTrack=0}] atFinish 3
 scoreboard players remove @a[scores={ignoreTrack=0,atFinish=2..}] atFinish 1
 
 # Ignores rhythm for players at the start or finish

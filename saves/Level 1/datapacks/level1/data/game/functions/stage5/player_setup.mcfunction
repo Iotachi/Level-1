@@ -1,6 +1,7 @@
 
 # Apply affects
 effect give @s minecraft:jump_boost 1000000 250 true
+effect clear @s minecraft:night_vision
 
 # Teleport player to stage
 execute if block 240 93 19 minecraft:gold_block run tp @s 240 94 19 180 0

@@ -1,10 +1,10 @@
 
 # "players" team checks if a player has been initialized, and prevents multiplayer interference
-team remove players
-team add players
+team remove playing
+team add playing
 # May need to update to pushOtherTeams when bug gets fixed
-team modify players collisionRule pushOwnTeam
-team modify players friendlyFire false
+team modify playing collisionRule pushOwnTeam
+team modify playing friendlyFire false
 
 # "no_collision" team prevents collision
 team remove no_collision
@@ -55,6 +55,7 @@ function game:stage4/reset
 function game:stage5/reset
 function game:stage6/reset
 function game:stage7/reset
+function game:stage8/reset
 
 # Resets break room
 function game:break/reset

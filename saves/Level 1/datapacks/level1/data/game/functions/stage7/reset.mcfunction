@@ -19,7 +19,3 @@ setblock 294 105 34 minecraft:air
 
 # Closes doors
 fill 304 105 40 304 107 41 minecraft:gray_stained_glass
-
-# DELETE WHEN FINISHED
-scoreboard players set #stage functionActive -1
-# DELETE WHEN FINISHED

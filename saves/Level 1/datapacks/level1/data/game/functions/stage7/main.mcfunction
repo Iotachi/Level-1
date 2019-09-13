@@ -11,6 +11,9 @@ execute unless block 306 97 9 minecraft:dispenser{Items:[{id:"minecraft:paper"}]
 # Dropping code into hopper
 execute unless block 304 105 40 minecraft:air as @e[type=minecraft:item,x=300.5,y=105,z=41.5,distance=..0.5,nbt={Item:{id:"minecraft:paper",tag:{RepairCost:0}}}] at @s run function game:stage7/code_input
 
+# Fixing anvil if broken
+execute if block 300 105 43 minecraft:chipped_anvil run setblock 300 105 43 minecraft:anvil[facing=west]
+
 
 # Item frame rotation prevention
 execute as @e[type=minecraft:item_frame,tag=ignore_rotation,nbt={ItemRotation:1b}] run data modify entity @s ItemRotation set value 0

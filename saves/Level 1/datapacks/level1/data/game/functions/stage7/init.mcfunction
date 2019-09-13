@@ -5,6 +5,17 @@ scoreboard players set #stage functionActive 7
 # Stores code and randomization numbers
 scoreboard objectives add code dummy
 
+# Loading chunks
+summon area_effect_cloud 0 0 0 {Tags:["chunk_load_base"],Passengers:[{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk0"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk1"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk2"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk3"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk4"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk5"]}]}
+kill @e[type=minecraft:area_effect_cloud,tag=chunk_load_base]
+spreadplayers 296 8 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk0]
+spreadplayers 312 8 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk1]
+spreadplayers 296 24 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk2]
+spreadplayers 312 24 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk3]
+spreadplayers 296 40 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk4]
+spreadplayers 312 40 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk5]
+kill @e[type=minecraft:area_effect_cloud,tag=chunk_load]
+
 
 # Summons above-anvil item frames
 summon minecraft:item_frame 302 106 43 {Facing:2b,Invulnerable:1b,Item:{id:"minecraft:filled_map",Count:1b},Tags:["display0","ignore_rotation","s7_kill"]}

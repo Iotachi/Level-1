@@ -4,6 +4,17 @@ scoreboard players set #stage functionActive 5
 # Checks if players leave and rejoin the world so it can update their jump boost
 scoreboard objectives add leftGame minecraft.custom:minecraft.leave_game
 
+# Loading chunks
+summon area_effect_cloud 0 0 0 {Tags:["chunk_load_base"],Passengers:[{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk0"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk1"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk2"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk3"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk4"]},{id:"minecraft:area_effect_cloud",Tags:["chunk_load","chunk5"]}]}
+kill @e[type=minecraft:area_effect_cloud,tag=chunk_load_base]
+spreadplayers 232 8 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk0]
+spreadplayers 248 8 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk1]
+spreadplayers 232 24 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk2]
+spreadplayers 248 24 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk3]
+spreadplayers 232 40 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk4]
+spreadplayers 248 40 0 1 false @e[type=minecraft:area_effect_cloud,tag=chunk5]
+kill @e[type=minecraft:area_effect_cloud,tag=chunk_load]
+
 # Summons levitation AECs
 summon minecraft:area_effect_cloud 233 94 5 {Duration:2147483647,Effects:[{Id:25b,Amplifier:4b,Duration:17,ShowParticles:0b}],Radius:0.7,Particle:"minecraft:block minecraft:air",Tags:["levitator","s5_kill"]}
 

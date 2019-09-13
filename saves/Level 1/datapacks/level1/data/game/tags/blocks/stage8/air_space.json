@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:carpets",
+    "minecraft:air",
+    "minecraft:quartz_slab",
+    "minecraft:quartz_stairs",
+    "minecraft:ladder",
+    "minecraft:stone_button"
+  ]
+}
